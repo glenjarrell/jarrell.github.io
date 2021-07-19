@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="jquery.js"></script>
+    <script src="bootstrap.bundle.js"></script>
+
+    <style>
+        .linkBawah {
+            color: yellow;
+            text-decoration: none;
+        }
+
+        .linkBawah:hover {
+            color: white;
+            text-decoration: none;
+        }
+
+        .navTulisan {
+            text-align: right;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .navHover:hover {
+            background-color: orange;
+        }
+
+
+        .card-footer {
+            margin: 0px;
+            background-color: black;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .navBawah {
+            display: inline;
+            padding: 70px;
+            color: yellow;
+            text-align: right;
+        }
+
+        .map-container {
+            overflow: hidden;
+            padding-bottom: 56.25%;
+            position: relative;
+            height: 0;
+        }
+
+        .map-container iframe {
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+        <img src="jarrell.jpeg" alt="" width="250" height="100" class="d-inline-block align-text-top">
+
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navTulisan"></div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="navHover nav-link navkanan hover text-dark" href="home.html">HOME<span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="navHover nav-link navkanan hover text-dark" href="portofolio.html">PORTOFOLIO</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="navHover nav-link navkanan hover text-dark" href="blog.html">BLOG<span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="navHover nav-link navkanan hover text-dark" href="about.html">ABOUT US</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="navHover nav-link navkanan hover text-dark" href="contact.html">CONTACT<span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="navHover nav-link navkanan hover text-dark" href="todos.html">TODOS</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+        </div>
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid" style="background-color: wheat;">
+        <div class="container">
+            <h1 style="color: rgb(255, 208, 0); width: 300px; height: 50px; background-color: grey;">CONTACT US</h1>
+        </div>
+    </div>
+
+    <!--Google map-->
+    <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px">
+        <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+            style="border:0" allowfullscreen></iframe>
+    </div>
+   <br><br>
+
+<div class="row">
+    <div class="col-sm">
+        <h3 style="padding-top: 10px; background-color: grey; width: 300px; height: 50px; margin-left: 50px; margin-bottom: 30px; color: yellow;">SEND US A MESSAGE</h3>
+    <form>
+        <div class="form-inline">
+            <input type="name" onfocus="this.value=''" class="form-control" id="exampleFormControlInput1" placeholder="nama...">
+            <input style=" margin-left: 10px;" onfocus="this.value=''" type="email" class="form-control" id="exampleFormControlInput1" placeholder="email...">
+            <input style=" margin-left: 10px;" onfocus="this.value=''" type="name" class="form-control" id="exampleFormControlInput1" placeholder="subject...">
+        </div>
+        <div>
+            <textarea onfocus="this.value=''" style=" margin-top: 10px; width: 600px;" class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="message..."></textarea>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-lg border border-dark" style="margin-top: 20px; color: yellow; background-color: black;">Send a message</button>
+        </div>
+    </form>
+</div>
+ <div class="col-sm">
+    <h3 style="padding-top: 10px; background-color: grey; width: 300px; height: 50px; margin-left: 50px; margin-bottom: 30px; color: yellow;">CONTACT INFO</h3>
+    <div style="margin-left: 40px;">
+    <img src="location.png" width="50px">
+    <p>Lorem ipsum dolor sit amet, adipiscing elit, sed diam nonummy nibh</p>
+    <img src="gmail.png" width="50px">
+    <p>Email : barton.jarrell@gmail.com</p>
+    <img src="WhatsApp.png" width="50px">
+    <p>phone: 0812 2789 2908</p>
+    
+</div>
+</div>
+</div>
+
+    <div class="footerAtas" style="background-color:rgba(7, 7, 7, 0.781); display: flex; margin-top: 30px;">
+        <div style="color: lightgrey; margin-left: 20px;">
+            <h3>About Us</h3>
+            <br>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis accusamus corporis nam rem. Aliquam
+                molestias, accusamus, recusandae consequuntur illo deleniti laboriosam hic ad maxime quae natus enim
+                quibusdam consequatur placeat.
+            </p>
+            <br>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis accusamus corporis nam rem. Aliquam
+                molestias, accusamus, recusandae consequuntur illo deleniti laboriosam hic ad maxime quae natus enim
+                quibusdam consequatur placeat.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis accusamus corporis nam rem. Aliquam
+                molestias, accusamus, recusandae consequuntur illo deleniti laboriosam hic ad maxime quae natus enim
+                quibusdam consequatur placeat.
+            </p>
+            <br>
+
+            <img src="computer.jpeg" style="margin-bottom: 30px;">
+            <img src="computer.jpeg" style="margin-bottom: 30px;">
+
+        </div>
+        <div style="color: lightgray; margin-left: 40px;">
+            <h3>Our latest news</h3>
+            <br>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quam recusandae fugiat aliquid
+                dolores amet, alias at illum dolor, consequatur doloremque ea! Quaerat atque aspernatur dolore est,
+                quia eveniet facilis.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quam recusandae fugiat aliquid
+                dolores amet, alias at illum dolor, consequatur doloremque ea! Quaerat atque aspernatur dolore est,
+                quia eveniet facilis.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quam recusandae fugiat aliquid
+                dolores amet, alias at illum dolor, consequatur doloremque ea! Quaerat atque aspernatur dolore est,
+                quia eveniet facilis.
+            </p>
+            <br>
+
+            <img src="computer.jpeg" style="margin-bottom: 30px;">
+            <img src="computer.jpeg" style="margin-bottom: 30px;">
+
+        </div>
+    </div>
+
+    <div class="card-footer">
+        <ul class="linkFooter">
+            <li class="navBawah"><a class="linkBawah" href="https://www.hacktiv8.com/">Click here to visit Hacktiv8 </a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

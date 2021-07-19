@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="jquery.js"></script>
+    <script src="bootstrap.bundle.js"></script>
+
+    <style>
+        .linkBawah {
+            color: yellow;
+            text-decoration: none;
+        }
+
+        .linkBawah:hover {
+            color: white;
+            text-decoration: none;
+        }
+
+        .navTulisan {
+            text-align: right;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .navHover:hover {
+            background-color: orange;
+        }
+
+
+        .card-footer {
+            margin: 0px;
+            background-color: black;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .navBawah {
+            display: inline;
+            padding: 70px;
+            color: yellow;
+            text-align: right;
+        }
+
+        .navTengah {
+            list-style-type: none;
+            justify-content: space-between;
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .galeri {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        input {
+            display: none;
+        }
+
+        .container {
+            width: 100%;
+            text-align: center;
+        }
+
+        .top-content {
+            background-color: rgb(243, 243, 243);
+            width: 90%;
+            margin: 0 auto 20px auto;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            border-radius: 3px;
+            box-shadow: 3px 3px 3px lightgray;
+        }
+
+        label {
+            display: inline-block;
+            height: 100%;
+            padding: 0 5px;
+            margin: 0 20px;
+            line-height: 60px;
+            font-size: 18px;
+            color: gray;
+            cursor: pointer;
+            transition: .5s;
+        }
+
+        label:hover {
+            color: black;
+        }
+        .tombol {
+            margin: 30px auto 30px auto;
+            margin-left: 320px;
+    }
+
+        button {
+            margin-left: 50px;
+            border: none;
+            color: grey;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            box-shadow: 3px 3px 3px lightgray;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+        <img src="jarrell.jpeg" alt="" width="250" height="100" class="d-inline-block align-text-top">
+
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navTulisan"></div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="navHover nav-link navkanan hover text-dark" href="home.html">HOME<span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="navHover nav-link navkanan hover text-dark" href="portofolio.html">PORTOFOLIO</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="navHover nav-link navkanan hover text-dark" href="blog.html">BLOG<span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="navHover nav-link navkanan hover text-dark" href="about.html">ABOUT US</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="navHover nav-link navkanan hover text-dark" href="contact.html">CONTACT<span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="navHover nav-link navkanan hover text-dark" href="todos.html">TODOS</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+        </div>
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid" style="background-color: wheat;">
+        <div class="container">
+            <h1 style="color: rgb(255, 208, 0); width: 300px; height: 50px; background-color: grey;">PORTOFOLIO</h1>
+        </div>
+    </div>
+    <div>
+        <h1 style="text-align: center; margin-top: 20px;">WE CREATE QUALITY DESIGNS</h1>
+        <h3 style="text-align: center;">Our speciality is web development and web design</h3>
+    </div>
+
+    <div class="tombol">
+        <button id="btn-all" onclick="renderAll()">All</button>
+        <button id="btn-a" onclick="renderA()">Websites</button>
+        <button id="btn-b" onclick="renderB()">Logo</button>
+        <button id="btn-b" onclick="renderC()">Photos</button>
+    </div>
+
+    <ul id="target">
+        <div class="photo-gallery row">
+            <div class="pic family col-sm">
+                <div class="portfolio-wrapper card" style="width: 18rem;">
+                    <a href="project.html">
+                        <img class="card-img-top" src="gambar1.jpeg" alt="Card image cap">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pic child col-sm">
+                <div class="portfolio-wrapper card" style="width: 18rem;">
+                    <a href="project.html">
+                        <img class="card-img-top" src="gambar2.jpeg" alt="Card image cap">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pic place col-sm">
+                <div class="portfolio-wrapper card" style="width: 18rem;">
+                    <a href="project.html">
+                        <img class="card-img-top" src="gambar3.jpeg" alt="Card image cap">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pic family col-sm">
+                <div class="portfolio-wrapper card" style="width: 18rem;">
+                    <a href="project.html">
+                        <img class="card-img-top" src="gambar1.jpeg" alt="Card image cap">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pic child col-sm">
+                <div class="portfolio-wrapper card" style="width: 18rem;">
+                    <a href="project.html">
+                        <img class="card-img-top" src="gambar2.jpeg" alt="Card image cap">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pic place col-sm">
+                <div class="portfolio-wrapper card" style="width: 18rem;">
+                    <a href="project.html">
+                        <img class="card-img-top" src="gambar3.jpeg" alt="Card image cap">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pic family col-sm">
+                <div class="portfolio-wrapper card" style="width: 18rem;">
+                    <a href="project.html">
+                        <img class="card-img-top" src="gambar1.jpeg" alt="Card image cap">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pic child col-sm">
+                <div class="portfolio-wrapper card" style="width: 18rem;">
+                    <a href="project.html">
+                        <img class="card-img-top" src="gambar2.jpeg" alt="Card image cap">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pic place col-sm">
+                <div class="portfolio-wrapper card" style="width: 18rem;">
+                    <a href="project.html">
+                        <img class="card-img-top" src="gambar3.jpeg" alt="Card image cap">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pic family col-sm">
+                <div class="portfolio-wrapper card" style="width: 18rem;">
+                    <a href="project.html">
+                        <img class="card-img-top" src="gambar1.jpeg" alt="Card image cap">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pic child col-sm">
+                <div class="portfolio-wrapper card" style="width: 18rem;">
+                    <a href="project.html">
+                        <img class="card-img-top" src="gambar2.jpeg" alt="Card image cap">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pic place col-sm">
+                <div class="portfolio-wrapper card" style="width: 18rem;">
+                    <a href="project.html">
+                        <img class="card-img-top" src="gambar3.jpeg" alt="Card image cap">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </ul>
+
+
+
+
+    <div class="footerAtas" style="background-color:rgba(7, 7, 7, 0.781); display: flex; margin-top: 30px;">
+        <div style="color: lightgrey; margin-left: 20px;">
+            <h3>About Us</h3>
+            <br>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis accusamus corporis nam rem. Aliquam
+                molestias, accusamus, recusandae consequuntur illo deleniti laboriosam hic ad maxime quae natus enim
+                quibusdam consequatur placeat.
+            </p>
+            <br>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis accusamus corporis nam rem. Aliquam
+                molestias, accusamus, recusandae consequuntur illo deleniti laboriosam hic ad maxime quae natus enim
+                quibusdam consequatur placeat.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis accusamus corporis nam rem. Aliquam
+                molestias, accusamus, recusandae consequuntur illo deleniti laboriosam hic ad maxime quae natus enim
+                quibusdam consequatur placeat.
+            </p>
+            <br>
+
+            <img src="computer.jpeg" style="margin-bottom: 30px;">
+            <img src="computer.jpeg" style="margin-bottom: 30px;">
+
+        </div>
+        <div style="color: lightgray; margin-left: 40px;">
+            <h3>Our latest news</h3>
+            <br>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quam recusandae fugiat aliquid
+                dolores amet, alias at illum dolor, consequatur doloremque ea! Quaerat atque aspernatur dolore est,
+                quia eveniet facilis.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quam recusandae fugiat aliquid
+                dolores amet, alias at illum dolor, consequatur doloremque ea! Quaerat atque aspernatur dolore est,
+                quia eveniet facilis.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quam recusandae fugiat aliquid
+                dolores amet, alias at illum dolor, consequatur doloremque ea! Quaerat atque aspernatur dolore est,
+                quia eveniet facilis.
+            </p>
+            <br>
+
+            <img src="computer.jpeg" style="margin-bottom: 30px;">
+            <img src="computer.jpeg" style="margin-bottom: 30px;">
+
+        </div>
+    </div>
+
+    <div class="card-footer">
+        <ul class="linkFooter">
+            <li class="navBawah"><a class="linkBawah" href="https://www.hacktiv8.com/">Click here to visit Hacktiv8
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+<script>
+    const arr = [
+        { type: 'a', value: 'gambar 1' },
+        { type: 'b', value: 'gambar 3' },
+        { type: 'c', value: 'gambar 5' },
+    ]
+    function renderAll() {
+        document.querySelector('#target').innerHTML = ''
+        arr.filter(el => el.type === 'a').forEach(el => {
+            document.querySelector('#target').innerHTML += `
+        <li>
+            <div class="photo-gallery row">
+            <div class="pic family col-sm">
+                <div class="portfolio-wrapper card" style="width: 18rem;">			
+                    <a href="project.html">
+                        <img class="card-img-top" src="gambar1.jpeg" alt="Card image cap">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                 </div>
+            </div>
+            <div class="pic child col-sm">
+                <div class="portfolio-wrapper card" style="width: 18rem;">			
+                    <a href="project.html">
+                        <img class="card-img-top" src="gambar2.jpeg" alt="Card image cap">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                 </div>
+            </div>
+        <div class="pic place col-sm">
+            <div class="portfolio-wrapper card" style="width: 18rem;">			
+                <a href="project.html">
+                    <img class="card-img-top" src="gambar3.jpeg" alt="Card image cap">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's content.</p>
+                </div>
+             </div>
+        </div>
+        <div class="pic family col-sm">
+            <div class="portfolio-wrapper card" style="width: 18rem;">			
+                <a href="project.html">
+                    <img class="card-img-top" src="gambar1.jpeg" alt="Card image cap">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's content.</p>
+                </div>
+             </div>
+        </div>
+        <div class="pic child col-sm">
+            <div class="portfolio-wrapper card" style="width: 18rem;">			
+                <a href="project.html">
+                    <img class="card-img-top" src="gambar2.jpeg" alt="Card image cap">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's content.</p>
+                </div>
+             </div>
+        </div>
+    <div class="pic place col-sm">
+        <div class="portfolio-wrapper card" style="width: 18rem;">			
+            <a href="project.html">
+                <img class="card-img-top" src="gambar3.jpeg" alt="Card image cap">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                    the card's content.</p>
+            </div>
+         </div>
+    </div>
+    <div class="pic family col-sm">
+        <div class="portfolio-wrapper card" style="width: 18rem;">			
+            <a href="project.html">
+                <img class="card-img-top" src="gambar1.jpeg" alt="Card image cap">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                    the card's content.</p>
+            </div>
+         </div>
+    </div>
+    <div class="pic child col-sm">
+        <div class="portfolio-wrapper card" style="width: 18rem;">			
+            <a href="project.html">
+                <img class="card-img-top" src="gambar2.jpeg" alt="Card image cap">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                    the card's content.</p>
+            </div>
+         </div>
+    </div>
+<div class="pic place col-sm">
+    <div class="portfolio-wrapper card" style="width: 18rem;">			
+        <a href="project.html">
+            <img class="card-img-top" src="gambar3.jpeg" alt="Card image cap">
+        </a>
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                the card's content.</p>
+        </div>
+     </div>
+</div>
+<div class="pic family col-sm">
+    <div class="portfolio-wrapper card" style="width: 18rem;">			
+        <a href="project.html">
+            <img class="card-img-top" src="gambar1.jpeg" alt="Card image cap">
+        </a>
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                the card's content.</p>
+        </div>
+     </div>
+</div>
+<div class="pic child col-sm">
+    <div class="portfolio-wrapper card" style="width: 18rem;">			
+        <a href="project.html">
+            <img class="card-img-top" src="gambar2.jpeg" alt="Card image cap">
+        </a>
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                the card's content.</p>
+        </div>
+     </div>
+</div>
+<div class="pic place col-sm">
+<div class="portfolio-wrapper card" style="width: 18rem;">			
+    <a href="project.html">
+        <img class="card-img-top" src="gambar3.jpeg" alt="Card image cap">
+    </a>
+    <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+            the card's content.</p>
+    </div>
+ </div>
+</div>
+</div>
+</div>
+         </li>
+         `;
+        })
+
+    }
+
+    function renderA() {
+        document.querySelector('#target').innerHTML = ''
+        arr.filter(el => el.type === 'a').forEach(el => {
+            document.querySelector('#target').innerHTML += `
+          <li>
+            <div class="row">
+            <div class="portfolio-wrapper card" style="width: 18rem;">			
+                    <a href="project.html">
+                        <img class="card-img-top" src="gambar1.jpeg" alt="Card image cap">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                 </div>
+                 <div class="portfolio-wrapper card" style="width: 18rem;">			
+                    <a href="project.html">
+                        <img class="card-img-top" src="gambar1.jpeg" alt="Card image cap">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                 </div>
+                 <div class="portfolio-wrapper card" style="width: 18rem;">			
+                    <a href="project.html">
+                        <img class="card-img-top" src="gambar1.jpeg" alt="Card image cap">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                 </div>
+                 <div class="portfolio-wrapper card" style="width: 18rem;">			
+                    <a href="project.html">
+                        <img class="card-img-top" src="gambar1.jpeg" alt="Card image cap">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                 </div>
+                 </div>
+                 
+            
+          </li>
+        `;
+        })
+    }
+    function renderB() {
+        document.querySelector('#target').innerHTML = ''
+        arr.filter(el => el.type === 'b').forEach(el => {
+            document.querySelector('#target').innerHTML += `
+        <li>
+            <div class="row">
+            <div class="portfolio-wrapper card" style="width: 18rem;">			
+                    <a href="project.html">
+                        <img class="card-img-top" src="gambar2.jpeg" alt="Card image cap">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                 </div>
+                 <div class="portfolio-wrapper card" style="width: 18rem;">			
+                    <a href="project.html">
+                        <img class="card-img-top" src="gambar2.jpeg" alt="Card image cap">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                 </div>
+                 <div class="portfolio-wrapper card" style="width: 18rem;">			
+                    <a href="project.html">
+                        <img class="card-img-top" src="gambar2.jpeg" alt="Card image cap">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                 </div>
+                 <div class="portfolio-wrapper card" style="width: 18rem;">			
+                    <a href="project.html">
+                        <img class="card-img-top" src="gambar2.jpeg" alt="Card image cap">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                 </div>
+                 </div>
+        </li>
+        `;
+        })
+    }
+
+    function renderC() {
+        document.querySelector('#target').innerHTML = ''
+        arr.filter(el => el.type === 'c').forEach(el => {
+            document.querySelector('#target').innerHTML += `
+        <li>
+            <div class="row">
+            <div class="portfolio-wrapper card" style="width: 18rem;">			
+                    <a href="project.html">
+                        <img class="card-img-top" src="gambar3.jpeg" alt="Card image cap">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                 </div>
+                 <div class="portfolio-wrapper card" style="width: 18rem;">			
+                    <a href="project.html">
+                        <img class="card-img-top" src="gambar3.jpeg" alt="Card image cap">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                 </div>
+                 <div class="portfolio-wrapper card" style="width: 18rem;">			
+                    <a href="project.html">
+                        <img class="card-img-top" src="gambar3.jpeg" alt="Card image cap">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                 </div>
+                 <div class="portfolio-wrapper card" style="width: 18rem;">			
+                    <a href="project.html">
+                        <img class="card-img-top" src="gambar3.jpeg" alt="Card image cap">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                 </div>
+                 </div>
+         </li>
+         `;
+        })
+    }
+
+</script>
+
+</html>
